@@ -35,7 +35,10 @@ export default function Index({ projects }) {
                 </thead>
                 <tbody>
                   {projects.data.map((projects) => (
-                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <tr
+                      key={projects.id}
+                      className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                    >
                       <td className="px-3 py-2">{projects.id}</td>
                       <td className="px-3 py-2">
                         <img src={projects.image_path} alt="" />
